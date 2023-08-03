@@ -1,0 +1,47 @@
+.conatiner{
+    display: grid;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width : 380px){
+    .images{
+        display: flex;
+        width: 100vw;
+        flex-direction: column;
+        object-fit: cover;
+        gap : 0.5rem;
+    }
+}
+
+@media (min-width : 768px) and (max-width : 1023px)
+{
+    .images{
+        display: grid;
+        object-fit: cover;
+        width: auto;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5,1fr);
+        gap: 0.5rem;
+    }
+}
+
+@media (min-width : 1024px)
+{
+    .images{
+        object-fit: cover;
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+        gap : 0.5rem;
+    }
+    .image2{
+        object-fit: cover;
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
